@@ -4,5 +4,6 @@
     <string name="current">Actual:</string>
     <string name="max">"Maximo: "</string>
     <string name="min">"Minimo: "</string>
-    <string name="search">"Buscar: "</string>
+    <string name="search">"Buscar "</string>
+    <string name="weather">Clima:</string>
 </resources>

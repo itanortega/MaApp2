@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="label">90dp</dimen>
+    <dimen name="ancho">100dp</dimen>
+    <dimen name="ancho2">130dp</dimen>
     <dimen name="hlabel">30dp</dimen>
+    <dimen name="imgd">35dp</dimen>
 </resources>
