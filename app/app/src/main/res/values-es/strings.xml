@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DemoWeather</string>
+    <string name="current">Actual:</string>
+    <string name="max">"Maximo: "</string>
+    <string name="min">"Minimo: "</string>
+    <string name="search">"Buscar: "</string>
+</resources>
