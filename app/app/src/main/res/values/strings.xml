@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">DemoWeather</string>
-    <string name="current">Temperatura current:</string>
-    <string name="max">Temperatura max:</string>
-    <string name="min">Temperatura min:</string>
+    <string name="current">Temperature current:</string>
+    <string name="max">Temperature max:</string>
+    <string name="min">Temperature min:</string>
     <string name="search">Search</string>
     <string name="weather">Weather:</string>
+    <string name="go">Go</string>
 </resources>

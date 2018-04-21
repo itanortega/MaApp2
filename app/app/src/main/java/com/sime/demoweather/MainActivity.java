@@ -1,7 +1,9 @@
 package com.sime.demoweather;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Icon;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView Lbl_Max;
     private ImageView Img_Weather;
     private TextView Lbl_Weather;
+    private Button Btn_Go;
+
+    private double lon = 0;
+    private double lat = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +55,25 @@ public class MainActivity extends AppCompatActivity {
         Lbl_Max = (TextView) this.findViewById(R.id.Lbl_Max);
         Img_Weather = (ImageView) this.findViewById(R.id.Img_Weather);
         Lbl_Weather = (TextView) this.findViewById(R.id.Lbl_Weather);
+        Btn_Go = (Button) this.findViewById(R.id.Btn_Go);
 
         Btn_Search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String query = Txt_Query.getText().toString();
                 search(query);
+            }
+        });
+
+        Btn_Go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(lon != 0 && lat != 0){
+                    Uri uri = Uri.parse("geo:" + lat + "," + lon);
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, uri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                }
             }
         });
     }
@@ -81,11 +100,15 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         JSONObject root = new JSONObject(remoteData.toText());
                         JSONArray weather = root.getJSONArray("weather");
+                        JSONObject coords = root.getJSONObject("coord");
                         JSONObject main = root.getJSONObject("main");
 
                         String desc = "";
                         String icon = "";
                         Bitmap bitmap = null;
+
+                        lat = coords.getDouble("lat");
+                        lon = coords.getDouble("lon");
 
                         if(weather.length()>0){
                             JSONObject aWeather = weather.getJSONObject(0);
