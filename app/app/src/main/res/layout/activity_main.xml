@@ -34,9 +34,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="hola"
                 android:paddingLeft="10dp"
-                android:id="@+id/Txt_Current"/>
+                android:id="@+id/Lbl_Current"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,9 +48,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="hola"
                 android:paddingLeft="10dp"
-                android:id="@+id/Txt_Min"/>
+                android:id="@+id/Lbl_Min"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,9 +62,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="hola"
                 android:paddingLeft="10dp"
-                android:id="@+id/Txt_Max"/>
+                android:id="@+id/Lbl_Max"/>
         </LinearLayout>
     </LinearLayout>
 
