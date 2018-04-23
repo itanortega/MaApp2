@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DemoWeather</string>
-    <string name="current">Temperatura actual:</string>
-    <string name="max">"Temperatura maxima: "</string>
-    <string name="min">"Temperatura minima: "</string>
-    <string name="search">"Buscar "</string>
-    <string name="weather">Clima:</string>
+    <string name="current">Actual: </string>
+    <string name="max">Max: </string>
+    <string name="min">Min: </string>
+    <string name="search">"Buscar"</string>
+    <string name="weather">Clima: </string>
     <string name="go">Ir</string>
+    <string name="digCity">Ingrese lugar:</string>
 </resources>

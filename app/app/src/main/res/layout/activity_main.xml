@@ -10,7 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#f4d7f9">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/digCity"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,112 +25,101 @@
             android:layout_height="wrap_content"
             android:text="@string/search"
             android:id="@+id/Btn_Search"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"/>
+            android:layout_gravity="center_horizontal"/>
 
-        <ScrollView
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/Img_Weather"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal" >
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:text="@string/weather"
+                android:gravity="right"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:id="@+id/Lbl_Weather"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="16dp"
-                    android:gravity="center_horizontal"
-                    style="@style/item">
-                    <TextView
-                        android:layout_width="@dimen/ancho"
-                        android:layout_height="@dimen/hlabel"
-                        android:text="@string/current"
-                        android:gravity="right"
-                        style="@style/label"/>
-                    <TextView
-                        android:layout_width="@dimen/ancho"
-                        android:layout_height="@dimen/hlabel"
-                        android:paddingLeft="10dp"
-                        android:id="@+id/Lbl_Current"
-                        android:gravity="left"
-                        android:layout_gravity="center_vertical"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    style="@style/item">
-                    <TextView
-                        android:layout_width="@dimen/ancho"
-                        android:layout_height="@dimen/hlabel"
-                        android:gravity="right"
-                        android:text="@string/min"
-                        style="@style/label"/>
-                    <TextView
-                        android:layout_width="@dimen/ancho"
-                        android:layout_height="@dimen/hlabel"
-                        android:paddingLeft="10dp"
-                        android:id="@+id/Lbl_Min"
-                        android:gravity="left"
-                        android:layout_gravity="center_vertical"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    style="@style/item">
-                    <TextView
-                        android:layout_width="@dimen/ancho"
-                        android:layout_height="@dimen/hlabel"
-                        android:text="@string/max"
-                        android:gravity="right"
-                        style="@style/label"/>
-                    <TextView
-                        android:layout_width="@dimen/ancho"
-                        android:layout_height="@dimen/hlabel"
-                        android:paddingLeft="10dp"
-                        android:id="@+id/Lbl_Max"
-                        android:layout_gravity="center_vertical"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal"
-                    style="@style/item">
-                    <TextView
-                        android:layout_width="@dimen/ancho2"
-                        android:layout_height="@dimen/hlabel"
-                        android:text="@string/weather"
-                        android:gravity="right"
-                        style="@style/label"/>
-                    <ImageView
-                        android:layout_width="@dimen/imgd"
-                        android:layout_height="@dimen/imgd"
-                        android:id="@+id/Img_Weather"
-                        android:layout_gravity="center_vertical"/>
-                    <TextView
-                        android:layout_width="@dimen/ancho2"
-                        android:layout_height="@dimen/hlabel"
-                        android:id="@+id/Lbl_Weather"
-                        android:layout_gravity="center_vertical"/>
-                </LinearLayout>
-
-
-                <Button
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/go"
-                    android:id="@+id/Btn_Go"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="30dp"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:text="@string/current"
+                    android:gravity="right"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/Lbl_Current"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"/>
             </LinearLayout>
-        </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal" >
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:gravity="right"
+                    android:text="@string/min"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/Lbl_Min"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal" >
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:text="@string/max"
+                    android:gravity="right"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/Lbl_Max"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="@string/go"
+                android:id="@+id/Btn_Go"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"/>
+        </LinearLayout>
     </LinearLayout>
 
 
